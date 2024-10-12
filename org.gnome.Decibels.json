@@ -1,14 +1,14 @@
 {
   "id": "org.gnome.Decibels",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "46",
+  "runtime-version": "47",
   "sdk": "org.gnome.Sdk",
   "sdk-extensions": [
-    "org.freedesktop.Sdk.Extension.node18",
+    "org.freedesktop.Sdk.Extension.node20",
     "org.freedesktop.Sdk.Extension.typescript"
   ],
   "build-options": {
-    "append-path": "/usr/lib/sdk/node18/bin:/usr/lib/sdk/typescript/bin"
+    "append-path": "/usr/lib/sdk/node20/bin:/usr/lib/sdk/typescript/bin"
   },
   "command": "org.gnome.Decibels",
   "finish-args": [
@@ -38,8 +38,8 @@
       "sources": [
         {
           "type": "git",
-          "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
-          "tag": "v0.12.0"
+          "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler.git",
+          "tag": "v0.14.0"
         }
       ]
     },
