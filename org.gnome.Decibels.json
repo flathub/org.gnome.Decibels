@@ -1,7 +1,7 @@
 {
   "id": "org.gnome.Decibels",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "47",
+  "runtime-version": "48",
   "sdk": "org.gnome.Sdk",
   "sdk-extensions": [
     "org.freedesktop.Sdk.Extension.node20",
@@ -38,8 +38,13 @@
       "sources": [
         {
           "type": "git",
-          "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler.git",
-          "tag": "v0.14.0"
+          "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
+          "tag": "v0.16.0",
+          "x-checker-data": {
+            "type": "git",
+            "tag-pattern": "^v([\\d.]+)$"
+          },
+          "commit": "04ef0944db56ab01307a29aaa7303df6067cb3c0"
         }
       ]
     },
@@ -48,9 +53,14 @@
       "buildsystem": "meson",
       "sources": [
         {
-          "type": "git",
-          "url": "https://gitlab.gnome.org/GNOME/Incubator/Decibels",
-          "tag": "46.0"
+          "type": "archive",
+          "url": "https://download.gnome.org/sources/decibels/48/decibels-48.0.tar.xz",
+          "sha256": "229b11a9263147bcb8c3e21ff0d4af659fb26262f8aece547adcf8c65e031f74",
+          "x-checker-data": {
+            "type": "gnome",
+            "name": "decibels",
+            "is-important": true
+          }
         }
       ]
     }
