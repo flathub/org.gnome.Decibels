@@ -1,68 +1,70 @@
 {
-  "id": "org.gnome.Decibels",
-  "runtime": "org.gnome.Platform",
-  "runtime-version": "48",
-  "sdk": "org.gnome.Sdk",
-  "sdk-extensions": [
-    "org.freedesktop.Sdk.Extension.node20",
-    "org.freedesktop.Sdk.Extension.typescript"
-  ],
-  "build-options": {
-    "append-path": "/usr/lib/sdk/node20/bin:/usr/lib/sdk/typescript/bin"
-  },
-  "command": "org.gnome.Decibels",
-  "finish-args": [
-    "--device=dri",
-    "--share=ipc",
-    "--socket=fallback-x11",
-    "--socket=wayland",
-    "--socket=pulseaudio",
-    "--env=GJS_DISABLE_JIT=1"
-  ],
-  "cleanup": [
-    "/include",
-    "/lib/pkgconfig",
-    "/man",
-    "/share/doc",
-    "/share/gtk-doc",
-    "/share/man",
-    "/share/pkgconfig",
-    "*.la",
-    "*.a"
-  ],
-  "modules": [
-    {
-      "name": "blueprint-compiler",
-      "buildsystem": "meson",
-      "cleanup": ["*"],
-      "sources": [
-        {
-          "type": "git",
-          "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
-          "tag": "v0.16.0",
-          "x-checker-data": {
-            "type": "git",
-            "tag-pattern": "^v([\\d.]+)$"
-          },
-          "commit": "04ef0944db56ab01307a29aaa7303df6067cb3c0"
-        }
-      ]
+    "id": "org.gnome.Decibels",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "48",
+    "sdk": "org.gnome.Sdk",
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.node20",
+        "org.freedesktop.Sdk.Extension.typescript"
+    ],
+    "build-options": {
+        "append-path": "/usr/lib/sdk/node20/bin:/usr/lib/sdk/typescript/bin"
     },
-    {
-      "name": "decibels",
-      "buildsystem": "meson",
-      "sources": [
+    "command": "org.gnome.Decibels",
+    "finish-args": [
+        "--device=dri",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--socket=pulseaudio",
+        "--env=GJS_DISABLE_JIT=1"
+    ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/man",
+        "/share/doc",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/pkgconfig",
+        "*.la",
+        "*.a"
+    ],
+    "modules": [
         {
-          "type": "archive",
-          "url": "https://download.gnome.org/sources/decibels/48/decibels-48.0.tar.xz",
-          "sha256": "229b11a9263147bcb8c3e21ff0d4af659fb26262f8aece547adcf8c65e031f74",
-          "x-checker-data": {
-            "type": "gnome",
+            "name": "blueprint-compiler",
+            "buildsystem": "meson",
+            "cleanup": [
+                "*"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
+                    "tag": "v0.18.0",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    },
+                    "commit": "07c9c9df9cd1b6b4454ecba21ee58211e9144a4b"
+                }
+            ]
+        },
+        {
             "name": "decibels",
-            "is-important": true
-          }
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/decibels/49/decibels-49.0.tar.xz",
+                    "sha256": "29b79ba2e2967e69141e39f0ad2c677e38fe3ffb9fba0fa5c7531f94d3f673ca",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "decibels",
+                        "is-important": true
+                    }
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
