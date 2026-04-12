@@ -26,8 +26,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/decibels/49/decibels-49.0.tar.xz",
-                    "sha256": "29b79ba2e2967e69141e39f0ad2c677e38fe3ffb9fba0fa5c7531f94d3f673ca",
+                    "url": "https://download.gnome.org/sources/decibels/49/decibels-49.6.1.tar.xz",
+                    "sha256": "9a67ba14df23517c849fcfdea764c73a241e59055299b125e98aeab2a7801ad5",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "decibels",
