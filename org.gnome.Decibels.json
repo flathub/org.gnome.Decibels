@@ -1,40 +1,40 @@
 {
-    "id": "org.gnome.Decibels",
-    "runtime": "org.gnome.Platform",
-    "runtime-version": "50",
-    "sdk": "org.gnome.Sdk",
-    "sdk-extensions": [
-        "org.freedesktop.Sdk.Extension.node24",
-        "org.freedesktop.Sdk.Extension.typescript"
-    ],
-    "build-options": {
-        "append-path": "/usr/lib/sdk/node24/bin:/usr/lib/sdk/typescript/bin"
-    },
-    "command": "org.gnome.Decibels",
-    "finish-args": [
-        "--device=dri",
-        "--share=ipc",
-        "--socket=fallback-x11",
-        "--socket=wayland",
-        "--socket=pulseaudio",
-        "--env=GJS_DISABLE_JIT=1"
-    ],
-    "modules": [
+  "id": "org.gnome.Decibels",
+  "runtime": "org.gnome.Platform",
+  "runtime-version": "51",
+  "sdk": "org.gnome.Sdk",
+  "sdk-extensions": [
+    "org.freedesktop.Sdk.Extension.node26",
+    "org.freedesktop.Sdk.Extension.typescript"
+  ],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/node26/bin:/usr/lib/sdk/typescript/bin"
+  },
+  "command": "org.gnome.Decibels",
+  "finish-args": [
+    "--device=dri",
+    "--share=ipc",
+    "--socket=fallback-x11",
+    "--socket=wayland",
+    "--socket=pulseaudio",
+    "--env=GJS_DISABLE_JIT=1"
+  ],
+  "modules": [
+    {
+      "name": "decibels",
+      "buildsystem": "meson",
+      "sources": [
         {
+          "type": "archive",
+          "url": "https://download.gnome.org/sources/decibels/49/decibels-49.6.1.tar.xz",
+          "sha256": "9a67ba14df23517c849fcfdea764c73a241e59055299b125e98aeab2a7801ad5",
+          "x-checker-data": {
+            "type": "gnome",
             "name": "decibels",
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/decibels/49/decibels-49.6.1.tar.xz",
-                    "sha256": "9a67ba14df23517c849fcfdea764c73a241e59055299b125e98aeab2a7801ad5",
-                    "x-checker-data": {
-                        "type": "gnome",
-                        "name": "decibels",
-                        "is-important": true
-                    }
-                }
-            ]
+            "is-important": true
+          }
         }
-    ]
+      ]
+    }
+  ]
 }
